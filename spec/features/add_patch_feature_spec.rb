@@ -8,20 +8,20 @@ feature 'Add a patch' do
     end
 
     scenario 'succeeds with acceptable details' do
-      visit '/patches/new'
+      visit '/patches'
+      click_link 'Add Patch'
       fill_in 'Location', with: 'EC4M 8AD'
-      select 'Hanging basket', from: 'What sort of space would you like to offer?'
+      select 'Hanging basket', from: 'Space to offer'
       select '0-1 year', from: 'How long can you offer this space?'
       fill_in 'Description', with: 'Triangle shaped, overlooking river'
       click_button 'List my patch'
       expect(page).to have_content(
         'You have successfully added your Hanging basket')
-      # expect(current_path).to eq '/patches'
     end
 
     scenario 'fails with location missing' do
       visit '/patches/new'
-      select 'Hanging basket', from: 'What sort of space would you like to offer?'
+      select 'Hanging basket', from: 'Space to offer'
       select '0-1 year', from: 'How long can you offer this space?'
       click_button 'List my patch'
       expect(page).to have_content("Location can't be blank")
@@ -30,12 +30,27 @@ feature 'Add a patch' do
 
     scenario 'add a patch with an image' do
       visit '/patches/new'
-      select 'Hanging basket', from: 'What sort of space would you like to offer?'
+      select 'Hanging basket', from: 'Space to offer'
       select '0-1 year', from: 'How long can you offer this space?'
       fill_in 'Location', with: 'EC4M 8AD'
       attach_file 'Image', 'public/test.gif'
       click_button 'List my patch'
       expect(page).to have_css "img[src*='test.gif']"
+    end
+
+    scenario 'Can add multiple patches' do
+      visit '/patches/new'
+      select 'Hanging basket', from: 'Space to offer'
+      select '0-1 year', from: 'How long can you offer this space?'
+      fill_in 'Location', with: 'EC4M 8AD'
+      click_button 'List my patch'
+      visit '/patches/new'
+      select 'Hanging basket', from: 'Space to offer'
+      select '0-1 year', from: 'How long can you offer this space?'
+      fill_in 'Location', with: 'YO10 3DD'
+      click_button 'List my patch'
+      expect(page).to have_content "EC4M 8AD"
+      expect(page).to have_content "YO10 3DD"
     end
 
     xscenario 'validates postcode is correct' do
