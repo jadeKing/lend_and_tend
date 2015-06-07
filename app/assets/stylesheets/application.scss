@@ -5,6 +5,7 @@
 @import 'forms';
 @import 'footer';
 @import 'users';
+@import 'flash_messages';
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 
@@ -28,22 +29,6 @@
   font-family: 'Open Sans', sans-serif;
 }
 
- // Flash Messages
-
- .alert {
-  width: 70%;
-  margin: auto;
-  margin-bottom: 1em;
- }
-
- .home-alert {
-  z-index: 9;
-  position: absolute;
-  width: 70%;
-  left: 15%;
-  right: 15%;
-  top: 1em;
- }
 
 // Homepage images
 
