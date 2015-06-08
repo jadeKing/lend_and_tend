@@ -1,3 +1,84 @@
 // Place all the styles related to the HomepagePhotos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.img{
+  background-image: url('https://photos-5.dropbox.com/t/2/AADMaholVLXDW1Rb8OwJDE34KbkWdvS2i8EeJsbcFyqLiQ/12/134460480/jpeg/32x32/1/1432551600/0/2/IMG_8176.jpg/CMDojkAgASACIAMgBCAFIAYoASgC/AtemsPpkHNvxcyv9BuTkqxlOXMoM6B7Dub6UN5zsq4E?size=1280x960&size_mode=2');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.img-sm{
+  height: 200px;
+}
+
+.image-spacer {
+text-align: center;
+  margin:auto;
+  height: 200px;
+}
+
+.center-items {
+  padding: 30px;
+}
+
+.logo-homepage {
+  max-width:95%;
+  margin-bottom: 5%;
+}
+
+.home-header {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+.home-subheader {
+  text-shadow: 2px 2px black;
+  font-size: 2.0em;
+  font-weight: bold;
+}
+
+.subheader {
+  font-weight: bold;
+}
+
+
+.home-jumbo {
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  height: 510px;
+  padding-top: 147px;
+}
+
+.home_img{
+  background-image: url('http://s0.geograph.org.uk/photos/24/78/247898_35e96af5.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.center-block {
+  letter-spacing: 1em;
+}
+
+.center-block form {
+  display: inline;
+}
+
+.home-img-container {
+ /* background-color: black;*/
+  height: 170px;
+  padding: 0;
+}
+
+.photo_wall {
+  margin-bottom: 7em;
+}

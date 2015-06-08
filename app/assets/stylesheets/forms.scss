@@ -1,6 +1,10 @@
 .auth-forms {
   @extend .center;
   max-width: 300px;
+
+  input[type="button"] {
+    width:100%;
+  }
 }
 
 .msg-form {
@@ -11,4 +15,47 @@
     margin: 0px;
     padding: 0px;
   }
+}
+.form-control:focus {
+  border-color: $secondary-color;
+  @include box-shadow($shadow);
+}
+
+.btn-custom {
+  background-color:$primary-color;
+  &:hover {
+    background-color: $primary-color;
+    @extend .form-control:focus;
+  }
+}
+
+// user management forms
+.fb_btn {
+  background-color: #3B5998;
+  color: white;
+  width: 100%
+}
+.join_btn {
+  width: 100%;
+}
+
+.join_inputs {
+  margin-bottom: 1em;
+}
+.join_or {
+  text-align: center;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
+.join_legals {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.7em;
+}
+
+.login_forgot_prompt {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.7em;
 }
