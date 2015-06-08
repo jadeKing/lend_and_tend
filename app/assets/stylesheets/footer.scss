@@ -4,12 +4,6 @@ html {
   min-height: 100%;
 }
 
-.social-footer {
-  max-width: 35px;
-  float: right;
-  margin-left: 0.5em;
-}
-
 body {
   margin-bottom: 60px;
 }
@@ -19,9 +13,8 @@ body {
   bottom: 0;
   @include size(100%,60px);
   background-color: $primary-color;
-  @extend .top-border-only;
+  @include top-border($secondary-color,$main-border);
   padding: 10px;
-
 
   .nav > li > a{
     padding: 0px 10px;
@@ -30,4 +23,9 @@ body {
     padding: 0px 0px;
   }
 
+}
+.social-footer {
+  max-width: 35px;
+  float: right;
+  margin-left: 0.5em;
 }
